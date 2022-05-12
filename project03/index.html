@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Site</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <script src="js/project03.js"></script>
+</head>
+<body>
+    <header class="container-fluid">
+        <h1 class="text-center">CSC 443/543 Project Assignment 3</h1>
+        <h2 class="text-center">JavaScript</h2>
+        <h3 class="text-danger text-center">Due Date: 04/24/2022 11:59PM</h3>
+        <p>
+            <h2 class="text-info"> Instructions:</h4>
+            In this programming assignment, you are asked to write JavaScripts to solve the following problems. For each problem, you need to write a program in a separate script. <br>
+            Question 1-5: please load the corresponding function using the button click event. By clicking the button, you should be able to get the user input and get the results. 
+            <h2 class="text-info"> Deliverables:</h4>
+                Please submit all the resources (HTML, CSS, JavaScript) on Blackboard. You can zip everything into one file and submit it.
+            <h2 class="text-info"> Grading:</h4>
+                Question 1-5: 3 points each<br>
+                Question 6: 5 points
+        </p>
+    </header>
+    <div class="col-xs|sm|md|lg|xl-1-12">
+        <h2 class="text-info"> Problems</h2>
+        <ol>
+            <li >
+                <h4 class="text-primary">Powerball</h2>
+                <p>
+                Write a script to generate a random powerball pick.<br>
+                <ol class="text-danger">
+                    Rules:
+                    <li>
+                        Five numbers from 1-69
+                    </li>
+                    <li>
+                        One number from 1-26
+                    </li>
+                    <li>
+                        Output format: use white space to seperate the first five numbers and use "+" to seperate the last number <br>
+                        Example: "1 2 3 4 5 + 6"
+                    </li>
+
+                </ol>  
+                </p>
+                <button class="btn btn-primary" onclick="powerball();"> Solution</button>
+            </li>
+            <li >
+                <h4 class="text-primary">Palindrome</h2>
+                <p>
+                Write a script to determine whether a given input is a palindrome. A palindrome is a word, phrase, number, or other sequence of characters which reads the same backward as forward, such as madam or racecar. 
+                </p>
+                <button class="btn btn-primary" onclick="alert(palindrome());"> Solution</button>
+            </li>
+
+            <li>
+                <h4 class="text-primary">Caesar Cipher Encryption</h2>
+                <p>
+                    Write a script to encrypt a sentence using caesar cipher. 
+                    Caesar cipher is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. (you can assume the number is 3) For example:<br>
+                    Plain:    ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                    Cipher:   XYZABCDEFGHIJKLMNOPQRSTUVW
+                </p>
+                <button class="btn btn-primary" onclick="alert(caesarCipherEncryption());"> Solution</button>
+            </li>
+
+            <li>
+                <h4 class="text-primary">Caesar Cipher Decoding</h2>
+                    <p>
+                        Write a script to decrypt encrypted text using caesar cipher. 
+                    </p>
+                    <button class="btn btn-primary" onclick="alert(caesarCipherDecoding());"> Solution</button>
+            </li>
+
+            <li>
+                <h4 class="text-primary">Parentheses Checker</h2>
+                <p>
+                    Write a program that checks whether the parentheses, brackets, and curly braces in a string are properly matched. If, for example, you look at the string:<br>
+	                <p class="text-danger text-center">{s=2*(a[2]+3);x=(1+(2));}</p>
+	                you will discover that all the bracketing operators are correctly nested, with each open parenthesis matched by a close parenthesis, each open bracket matched by a close bracket, and so on. One the other hand, the following strings are all unbalanced for the reasons indicated: <br>
+	                (([]) <br>
+	                )( <br>
+	                {(}) <br>
+                </p>
+                <button class="btn btn-primary" onclick="alert(parenthesesChecker());"> Solution</button>
+            </li>
+
+            <li >
+                <h4 class="text-primary">Stock</h2>
+                <ol>
+                    <li>
+                        You have been supplied with a JSON file named "companies.json". 
+                        Convert this file into an array of company objects using <strong>JSON.parse</strong>.
+                    </li>
+                    <li>
+                        Create a constructor function named "<strong>CompanyCard</strong>" which will be passed a company object 
+                        from the JSON data. Within the constructor function, create properties named <strong>symbol, name, day50, day200, 
+                            revenue, marketCap50, marketCap200, equity, </strong> and <strong>tags</strong>, whose values are extracted from the passed <strong>company</strong> object.
+                    </li>
+                    <li>
+                        Add a method to <strong>CompanyCard</strong> named <strong>currency()</strong> 
+                        using arrow syntax that is passed a number named <strong>num</strong> and returns a currency formatted number using the 
+                        <strong>Intl.NumberFormat()</strong> function (lookup the details online). Add another method to <strong> CompanyCard</strong> 
+                        named <strong>billions()</strong> using arrow syntax that is passed a number named <strong>num</strong> and returns a currency using compact notation, 
+                        also using the <strong>Intl.NumberFormat()</strong> function. This will display the large number in the data set as a short billions or millions value.
+                    </li>
+                    <li>
+                        Add a method to <strong>CompanyCard</strong> named <strong>outputCard()</strong> that uses the methods and properties created in 
+                        the two previous steps to output the markup for a single company card.
+                    </li>
+                    <li>
+                        Create a function named <strong>outputCompanyCards</strong> that loops through the company data, instantiate a 
+                        <strong>CompanyCard</strong> object using the <strong>new</strong> keyword, and then call the <strong>outputCard()</strong> 
+                        method of the <strong>CompanyCard</strong> object.
+                    </li>
+                </ol>
+
+                
+            </li>
+        </ol>
+        <div id="stock" class="row">
+                <section id="section"></section>
+                
+                    <script src="js/companies.json"></script>
+
+                    <script>
+                        //Constructor function CompanyCard
+                        function CompanyCard(object)
+                        {   
+                            //Function returns a currency formatted number
+                            this.currency = (num) => new Intl.NumberFormat('en-US',{ style: 'currency', currency: 'USD' }).format(num);
+                            
+                            //Function returns a currency using compact notation
+                            this.billions = (num) => new Intl.NumberFormat('en-US',{ notation: 'compact', style: 'currency', currency: 'USD' }).format(num);
+
+                            //CompanyCard Properties
+                            this.symbol=object.symbol;
+                            this.name=object.companyName;
+                            this.day50=this.currency(object.stats.day50MovingAvg);
+                            this.day200=this.currency(object.stats.day200MovingAvg);
+                            this.revenue=this.billions(object.stats.operatingRevenue - object.stats.costOfRevenue);
+                            this.marketCap50=this.billions(object.stats.day50MovingAvg * object.stats.sharesOutstanding);
+                            this.marketCap200=this.billions(object.stats.day200MovingAvg * object.stats.sharesOutstanding);
+                            this.equity=this.billions(object.stats.totalAssets - object.stats.totalLiabilities);
+                            this.tags=object.tags;
+                            this.tagsOutput='';
+
+                            //Function to output the markup for a single company card.
+                            this.outputCard = function()
+                            {
+                                //Set the tags
+                                this.setTags();
+
+                                //Create newcard
+                                const newcard=document.getElementById('section');
+
+                                //Create div Element 
+                                var div=document.createElement('div');
+
+                                //Append div to newcard (section)
+                                newcard.appendChild(div);
+
+                                //Dynamically create the card passing in the HTML
+                                div.innerHTML='<article class="card"><h2>' + this.symbol + ' - ' +this.name+ '</h2><div><p>Share Price (50day avg): <span>' + this.day50 + '</span></p><p>Share Price (200day avg): <span>' + this.day200 + '</span></p><p>Market Cap (50day avg): <span>' + this.marketCap50 + '</span></p><p>Market Cap (200day avg): <span>' + this.marketCap200 + '</span></p><p>Net Revenue: <span>' + this.revenue + '</span></p><p>Shareholder Equity: <span>' + this.equity + '</span></p></div><footer>'+this.getTags()+'</footer></article>';
+                            }
+
+                            //Function to take the tags array and change the array to an HTML string
+                            this.setTags = function()
+                            {
+                                for (let i in this.tags) 
+                                {   
+                                    this.tagsOutput += '<small>'+ this.tags[i]+'</small>'
+                                }
+                            }
+                            //Function to display the tags HTML output
+                            this.getTags = function()
+                            {
+                                return this.tagsOutput;
+                            }
+                        }
+
+                        //Function that loops through company data, instantiate a CompanyCard object and calls outputCard method
+                        function outputCompanyCards(myObj)
+                        {
+                            //Loop through company data
+                            for (let x in myObj) {
+                                const mycard = new CompanyCard(myObj[x]);
+                                mycard.outputCard();
+                            }
+                        }
+                        
+                        //Calling function outputCompanyCards passing in the JSON object
+                        outputCompanyCards(JSON.parse(content));
+
+                    </script> 
+        </div>
+
+    </div>
+</body>
+</html>
