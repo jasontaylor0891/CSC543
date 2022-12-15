@@ -29,11 +29,11 @@ In this programming assignment, we were asked to write JavaScripts to solve the 
    
 ### Project 4
 
-- You have been provided with the necessary styling and markup already. Examine pa4.html in the editor of your choice.
 - You have been provide with four JSON data files: users.json, stocks-complete.json, stock-formatted.json and single-user.json. The file users.json contains an array of objects consisting of an individual user's information and the stocks he or she owns (i.e., his or her portfolio). Information about each stock/company is contained in stocks-complete.json. Examine single-user.json and stocks-formatted.json, which contains single examples of the objects contained in users.json and stock-complete.json (and will not be used by your application since it is only provided for illustration purposes.)
-- Note: users.json and stocks-complete.json are actually js scripts define two variables with JSON string
-- Begin by modifying pa4.js and add a DOMContentLoaded event handler(3pt). All of your code will be inside that handler. Your handler will need to use the JSON.parse() method to transform the JSON data in the two JSON data files into JavaScript objects (1pt). Initially, your code should hide the details <section> by setting its display property to none (1pt)
-- Generate the user list by looping throught the objects in users.json and adding $ltli> elements to the user list <ul>(3pt). To make click processing easier, you will also want to add the id value of the user using the dataset property(2pt).
+- Note: users.json and stocks-complete.json are actually js scripts define two variables with JSON string
+- Begin by modifying pa4.js and add a DOMContentLoaded event handler(3pt). All of your code will be inside that handler. Your handler will need to use the JSON.parse() method to transform the JSON data in the two JSON data files into JavaScript objects (1pt). Initially, your code should hide the details `<section>` by setting its display property to none (1pt)
+- Generate the user list by looping throught the objects in users.json and adding elements to the user list `<ul>`(3pt). To make click processing easier, you will also want to add the id value of the user using the dataset property(2pt).
 - Use event delegation to handle all click events in the user list(2pt). If a list item is clicked, then unhide the details <section> and display the user information in the user details form and display their stock portfolio holdings in the portfolio section(3pt). This will require you to find the user in your array that matches the id value of the clicked thumbnail; you can do this via a simple loop.
 - Rather than use event delegation, assign a click event handler to each View button in the portfolio list(2pt). When the user clicks one of the these buttons, display the information for that stock in the stock details section(3pt).
+
 
